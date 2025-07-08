@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu Entry Form</title>
+</head>
+<body>
+  <h2>Enter Menu Item</h2>
+  <form id="menu-form">
+    <label>Date: <input type="date" name="date" required></label><br><br>
+    <label>Menu Item: <input type="text" name="menuItem" required></label><br><br>
+    <label>Quantity: <input type="number" name="quantity" required></label><br><br>
+    <label>Amount: <input type="number" name="amount" step="0.01" required></label><br><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="response"></p>
+
+  <script>
+    document.getElementById('menu-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(e.target);
+      const data = Object.fromEntries(formData.entries());
+
+      const response = await fetch('YOUR_WEB_APP_URL_HERE', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      });
+
+      const text = await response.text();
+      document.getElementById('response').textContent = text;
+    });
+  </script>
+</body>
+</html>
