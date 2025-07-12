@@ -1,39 +1,374 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Menu Entry Form</title>
-</head>
-<body>
-  <h2>Enter Menu Item</h2>
-  <form id="menu-form">
-    <label>Date: <input type="date" name="date" required></label><br><br>
-    <label>Menu Item: <input type="text" name="menuItem" required></label><br><br>
-    <label>Quantity: <input type="number" name="quantity" required></label><br><br>
-    <label>Amount: <input type="number" name="amount" step="0.01" required></label><br><br>
-    <button type="submit">Submit</button>
-  </form>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <title>JIGNATURE</title>
+  </head>
+  <body>
+    <section class="hero is-primary is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title" style="font-family:Georgia;font-size:38px;letter-spacing:-2px;transform: scaleY(1.5); display: inline-block;">JIGNATURE</h1>
+        </div>
+      </div>
+    </section>
+    <form id="form" class="container m-4 pl-4">
+	
+	
+      <div class="field">
+        <label class="label">Date of Sales</label>
+        <div class="control">
+          <input
+            class="input"
+            type="date"
+            placeholder="Your Date of Birth"
+            name="Date"
+          />
+        </div>
+      </div>
+	
+	
+      <div class="field">
+        <label class="label">JIGARTHANDA_CLASSIC</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Please enter the quantity"
+            name="JIGARTHANDA_CLASSIC"
+          />
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">JIGARTHANDA_SPECIAL</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Please enter the quantity"
+            name="JIGARTHANDA_SPECIAL"
+          />
+        </div>
+      </div>
+	  
+	   <div class="field">
+        <label class="label">JIGARTHANDA _NUTS</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Please enter the quantity"
+            name="JIGARTHANDA _NUTS"
+          />
+        </div>
+      </div>
+     
+	 	   <div class="field">
+        <label class="label">JIGARTHANDA CLASSIC PARCEL</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Please enter the quantity"
+            name="JIGARTHANDA_CLASSIC_PARCEL"
+          />
+        </div>
+      </div>
+	  
+	  
+	   <div class="field">
+        <label class="label">JIGARTHANDA SPECIAL PARCEL</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Please enter the quantity"
+            name="JIGARTHANDA_SPECIAL_PARCEL"
+          />
+        </div>
+      </div>
+	 
+	 
+	 	   <div class="field">
+        <label class="label">JIGARTHANDA  NUTS PARCEL</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Please enter the quantity"
+            name="JIGARTHANDA_NUTS_PARCEL"
+          />
+        </div>
+      </div>
+	  
+	  
+	   <div class="field">
+        <label class="label">40ML KULFI MAWA MALAI</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Please enter the quantity"
+            name="40ML_KULFI_MAWA_MALAI"
+          />
+        </div>
+      </div>	
 
-  <p id="response"></p>
 
-  <script>
-    document.getElementById('menu-form').addEventListener('submit', async (e) => {
-      e.preventDefault();
+	   <div class="field">
+        <label class="label">40ML KULFI BADAM</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Please enter the quantity"
+            name="40ML_KULFI_BADAM"
+          />
+        </div>
+      </div>		  
+	  
+	  
+	   <div class="field">
+        <label class="label">40ML KULFI PISTHA</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Please enter the quantity"
+            name="40ML_KULFI_PISTHA"
+          />
+        </div>
+      </div>		  
 
-      const formData = new FormData(e.target);
-      const data = Object.fromEntries(formData.entries());
 
-      const response = await fetch('https://script.google.com/macros/s/AKfycbzpleU5OUz0cBNNKYnv6-SbX1Q-v6-XK-LjIgYfbuCJpYUnX3L99-ziTIyKhad8XowTig/exec', {
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: {
-          'Content-Type': 'application/json',
+	   <div class="field">
+        <label class="label">BASUNDI SHOTS</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Please enter the quantity"
+            name="BASUNDI_SHOTS"
+          />
+        </div>
+      </div>		  
+
+
+
+	   <div class="field">
+        <label class="label">BASUNDI SHOTS PARCEL</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Please enter the quantity"
+            name="BASUNDI_SHOTS_PARCEL"
+          />
+        </div>
+      </div>		  
+
+
+	   <div class="field">
+        <label class="label">RICH BASUNDI</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Please enter the quantity"
+            name="RICH_BASUNDI"
+          />
+        </div>
+      </div>		
+
+
+	   <div class="field">
+        <label class="label">RICH BASUNDI PARCEL</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Please enter the quantity"
+            name="RICH_BASUNDI_PARCEL"
+          />
+        </div>
+      </div>	
+	 
+     
+      <div class="field">
+        <label class="label">Upload Document (Optional)</label>
+        <div class="control">
+          <div class="file has-name is-fullwidth">
+            <label class="file-label">
+              <input
+                class="file-input"
+                type="file"
+                name="theFile"
+                id="fileInput"
+                accept="*/*"
+              />
+              <span class="file-cta">
+                <span class="file-icon">
+                  <i class="fas fa-upload"></i>
+                </span>
+                <span class="file-label"> Choose a file… </span>
+              </span>
+              <span class="file-name" id="fileNameDisplay">
+                No file selected
+              </span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <input type="hidden" name="filename" id="actualFilename" />
+
+      <div class="field">
+        <label class="label">Agree to Terms</label>
+        <div class="control">
+          <label class="checkbox">
+            <input type="checkbox" name="Agree To Terms" value="yes" /> I agree
+            to the terms and conditions
+          </label>
+        </div>
+      </div>
+     
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-primary" type="submit" id="submit-button">
+            Sign Up
+          </button>
+        </div>
+        <div class="control">
+          <button
+            class="button is-danger"
+            type="button"
+            onclick="document.getElementById('form').reset(); document.getElementById('fileNameDisplay').textContent = 'No file selected';"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </form>
+    <div
+      id="message"
+      style="
+        display: none;
+        margin: 20px;
+        padding: 10px;
+        border-radius: 4px;
+        font-weight: bold;
+      "
+    ></div>
+
+    <script>
+      const form = document.getElementById("form");
+      const submitButton = document.getElementById("submit-button");
+      const messageDiv = document.getElementById("message");
+      const fileInput = document.getElementById("fileInput");
+      const fileNameDisplay = document.getElementById("fileNameDisplay");
+
+      // Update displayed filename on file selection
+      fileInput.addEventListener("change", function () {
+        if (this.files && this.files.length > 0) {
+          fileNameDisplay.textContent = this.files[0].name;
+        } else {
+          fileNameDisplay.textContent = "No file selected";
         }
       });
 
-      const text = await response.text();
-      document.getElementById('response').textContent = text;
-    });
-  </script>
-</body>
+      // Function to handle file upload
+      async function uploadFile(file) {
+        return new Promise((resolve, reject) => {
+          const fr = new FileReader();
+          fr.onload = (e) => {
+            const data = e.target.result.split(",");
+            const obj = {
+              fileName: file.name,
+              mimeType: data[0].match(/:(\w.+);/)[1],
+              data: data[1],
+            };
+            resolve(obj);
+          };
+          fr.onerror = reject;
+          fr.readAsDataURL(file);
+        });
+      }
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        messageDiv.textContent = "Submitting...";
+        messageDiv.style.display = "block";
+        messageDiv.style.backgroundColor = "beige";
+        messageDiv.style.color = "black";
+        submitButton.disabled = true;
+        submitButton.classList.add("is-loading");
+
+        try {
+          const formData = new FormData(this);
+          const formDataObj = {};
+
+          // Convert FormData to object
+          for (let [key, value] of formData.entries()) {
+            formDataObj[key] = value;
+          }
+
+          // Handle file upload if a file is selected
+          if (fileInput.files.length > 0) {
+            const fileObj = await uploadFile(fileInput.files[0]);
+            formDataObj.fileData = fileObj; // Add file data to form data
+          }
+
+          // Submit form data
+          const scriptURL =
+            "https://script.google.com/macros/s/AKfycbxDnCyv8mHgIS_mYYEaY6ysnUf9Um0VwTCAFu3mfV1W0qkCaY77kY9kV-2HPGh-tYcQ/exec";
+
+          const response = await fetch(scriptURL, {
+            redirect: "follow",
+            method: "POST",
+            body: JSON.stringify(formDataObj),
+            headers: {
+              "Content-Type": "text/plain;charset=utf-8",
+            },
+          });
+
+          const data = await response.json();
+
+          if (data.status === "success") {
+            messageDiv.textContent =
+              data.message || "Data submitted successfully!";
+            messageDiv.style.backgroundColor = "#48c78e";
+            messageDiv.style.color = "white";
+            form.reset();
+            fileNameDisplay.textContent = "No file selected";
+          } else {
+            throw new Error(data.message || "Submission failed");
+          }
+        } catch (error) {
+          console.error("Error:", error);
+          messageDiv.textContent = "Error: " + error.message;
+          messageDiv.style.backgroundColor = "#f14668";
+          messageDiv.style.color = "white";
+        } finally {
+          submitButton.disabled = false;
+          submitButton.classList.remove("is-loading");
+
+          setTimeout(() => {
+            messageDiv.textContent = "";
+            messageDiv.style.display = "none";
+          }, 4000);
+        }
+      });
+
+      // Enhance cancel button to reset file input display
+      const cancelButton = form.querySelector("button.is-danger");
+      cancelButton.addEventListener("click", function () {
+        form.reset();
+        fileNameDisplay.textContent = "No file selected";
+        messageDiv.style.display = "none";
+      });
+    </script>
+  </body>
 </html>
